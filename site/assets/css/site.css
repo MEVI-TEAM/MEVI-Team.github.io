@@ -419,6 +419,14 @@ a.avatar:hover{box-shadow:0 0 0 3px var(--accent-soft),0 0 0 5px var(--accent)}
 .m-roles dd{margin:6px 0 0;font-size:14.5px;line-height:1.75;color:var(--ink-2)}
 .m-roles dd+dt{margin-top:16px}
 
+/* 공동 대표 두 사람은 같은 모양의 카드로 나란히 둡니다. 역할은 적지 않습니다. */
+.team.co2{max-width:760px}
+.member.co{display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 26px 34px}
+.member.co .avatar{width:96px;height:96px;font-size:26px}
+.member.co h3{margin-top:20px;font-size:22px}
+.member.co .role{margin-top:4px;font-size:15px;font-weight:700;color:var(--ink-2)}
+.member.co .m-gh{margin-top:14px}
+
 /* ---------- 자주 묻는 질문 ---------- */
 .faq{border-top:1px solid var(--line);max-width:880px;margin:0 auto}
 .faq details{border-bottom:1px solid var(--line)}
@@ -686,20 +694,6 @@ a.avatar:hover{box-shadow:0 0 0 3px var(--accent-soft),0 0 0 5px var(--accent)}
 @media(max-width:1000px){.letters{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:44px}.letter:nth-child(3){border-left:0;padding-left:0}}
 @media(max-width:560px){.letters{grid-template-columns:1fr;row-gap:36px}.letter{border-left:0;padding:0}}
 
-/* ---------- 소개: 로고 ---------- */
-.logo-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
-@media(max-width:960px){.logo-grid{grid-template-columns:1fr;gap:36px}}
-.logo-show{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.logo-show .p{display:grid;place-items:center;border-radius:var(--r);padding:34px 20px}
-.logo-show .big{grid-column:1/-1;min-height:clamp(240px,26vw,340px);background:var(--surface);border:1px solid var(--line)}
-.logo-show .big .mark{width:clamp(130px,14vw,190px);height:auto;color:var(--ink)}
-.logo-show .big .mark .glow{stroke:#9AA3B5;stroke-dasharray:14 86;animation:markrun 4.2s linear infinite}
-.logo-show .lt{background:var(--surface);border:1px solid var(--line)}
-.logo-show .dk{background:var(--ink)}
-.logo-show img{display:block;width:min(200px,80%);height:auto}
-.logo-text .fact:last-of-type{border-bottom:1px solid var(--line)}
-.dl{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
-
 /* ---------- 홈: MEVI가 만드는 서비스 ---------- */
 .svc{padding:0 0 110px;background:#fff}
 .svc-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
@@ -820,6 +814,5 @@ footer.ft{border-top:1px solid #E6E8EE;background:#fff;color:var(--ink-2);font-s
   .hist-list>li.now::before{animation:none}
   .reveal-ready .card .bfill{transition:none;width:var(--v)}
   .reveal-ready .step.rv .fig-doc .hl::before{transform:none;transition:none}
-  .logo-show .big .mark .glow{animation-duration:8s}
   .faq summary::after{transition:none}
 }

@@ -9,7 +9,7 @@
 | 주소 | 화면 |
 | --- | --- |
 | `/#/` | 홈: 첫 화면 슬라이드 세 장(MEVI · More Evolution · Valuable Innovation), 새 소식, MEVI라는 이름, 분야 타일, MEVI가 만드는 서비스, MEVI 이야기 |
-| `/#/about` | 소개: 우리 이야기와 MEVI 한눈에, 이름에 담은 뜻, 로고, 우리의 가치, 걸어온 길 |
+| `/#/about` | 소개: 우리 이야기와 MEVI 한눈에, 이름에 담은 뜻, 우리의 가치, 걸어온 길 |
 | `/#/services` | 서비스: 두 서비스 한눈에, 이런 분들을 위해 |
 | `/#/campusscanner` | CampusScanner 자세히 |
 | `/#/swapstay` | SwapStay 자세히 |
@@ -21,7 +21,7 @@
 
 ## 로고
 
-`site/assets/brand/`에 있습니다. 사이트 소개 화면의 "로고"에서도 내려받을 수 있습니다.
+`site/assets/brand/`에 있습니다. 사이트에는 로고를 소개하는 구역을 두지 않습니다.
 
 | 파일 | 쓰는 곳 |
 | --- | --- |
