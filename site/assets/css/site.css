@@ -2,7 +2,8 @@
    MEVI 사이트
    SOVIS 사이트(sovis-team.github.io)의 구성과 치수를 그대로 따르고,
    색·로고·사진·내용만 MEVI 것으로 바꿨습니다.
-   - 강조색은 해 질 녘 주황 한 가지(--accent). 흰 바탕 글자 대비 5.3:1입니다.
+   - 로고(검은 m)에 맞춰 먹색과 흰색만 씁니다. 색은 사진이 맡습니다.
+     (2026-11-19 주황 강조색은 주황 바탕 + 아치 모양이 패스트푸드 로고처럼 보여 뺐습니다.)
    - 표면 14px, 조작 요소 999px, 사진 카드 4~6px 둥글기(SOVIS와 같음).
    ============================================================ */
 :root{
@@ -14,10 +15,10 @@
   --ink:#14171F;
   --ink-2:#4F5868;
   --ink-3:#5C6472;
-  --accent:#BA4419;
-  --accent-hover:#9C3914;
-  --accent-soft:#FCEEE8;
-  --accent-light:#FFC4A8;
+  --accent:#14171F;
+  --accent-hover:#30364A;
+  --accent-soft:#EEF0F4;
+  --accent-light:rgba(255,255,255,.94);
   --night:#06080F;
   --gnbh:70px;
   --r:14px;
@@ -203,8 +204,8 @@ body.menu-open{overflow:hidden}
 
 /* ---------- 새 소식 ---------- */
 .nws{padding:60px 0 64px;background:#fff}
-.nws-in,.sty-in,.dlc-in{max-width:1480px;margin:0 auto;padding:0 28px}
-@media(max-width:640px){.nws-in,.sty-in,.dlc-in{padding:0 18px}}
+.nws-in,.sty-in,.nm-in{max-width:1480px;margin:0 auto;padding:0 28px}
+@media(max-width:640px){.nws-in,.sty-in,.nm-in{padding:0 18px}}
 .nws-head,.sty-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:24px}
 .nws-head h2,.sty-head h2{font-size:22px;font-weight:800;letter-spacing:-.02em;margin:0}
 .more{font-size:14.5px;font-weight:700;color:var(--ink-2);white-space:nowrap}
@@ -225,22 +226,26 @@ body.menu-open{overflow:hidden}
   .nws-list a,.nws-list li:first-child a{padding:16px 0}
 }
 
-/* ---------- 쌓은 커밋 ---------- */
-.dlc{padding:0 0 60px;background:#fff}
-.dlc-box{border-top:1px solid #E3E6EC;padding-top:40px}
-.dlc-src{font-size:13.5px;font-weight:600;color:var(--ink-3)}
-.dlc-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.dlc-list li+li{border-left:1px solid #E3E6EC}
-.dlc-list .it{display:block;padding:2px 32px 4px}
-.dlc-list li:first-child .it{padding-left:0}
-.dlc-list .k{display:block;margin-bottom:6px;font-size:14.5px;font-weight:700;color:var(--ink-2)}
-.dlc-list b{display:block;white-space:nowrap;font-size:clamp(28px,3.6vw,46px);font-weight:800;letter-spacing:-.04em;line-height:1.1;color:var(--ink);font-variant-numeric:tabular-nums}
-.dlc-list b small{margin-left:2px;font-size:.5em;font-weight:700;letter-spacing:0}
-.dlc-list li:first-child b{color:var(--accent)}
-.dlc-list a.it:hover .k{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
-@media(max-width:860px){.dlc-box{padding-top:32px}.dlc-list .it{padding:2px 14px 4px}}
-@media(max-width:560px){.dlc-list .k{font-size:12.5px;white-space:nowrap}}
-@media(max-width:400px){.dlc-list .it{padding:2px 8px 4px}.dlc-list b{font-size:24px}}
+/* ---------- MEVI라는 이름 (홈) ----------
+   SOVIS의 누적 다운로드 자리. 숫자 대신 이름의 네 글자를 둡니다. */
+.nm{padding:0 0 64px;background:#fff}
+.nm-box{border-top:1px solid #E3E6EC;padding-top:40px}
+.nm-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.nm-list li+li{border-left:1px solid #E3E6EC}
+.nm-list a{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:4px 18px;padding:2px 28px 4px}
+.nm-list li:first-child a{padding-left:0}
+.nm-list b{grid-row:1/3;font-size:clamp(44px,4.6vw,64px);font-weight:800;line-height:1;letter-spacing:-.03em;color:var(--ink)}
+.nm-list span{font-size:15px;font-weight:700;color:var(--ink-3);white-space:nowrap}
+.nm-list em{font-style:normal;font-size:17px;font-weight:700;letter-spacing:-.03em;color:var(--ink)}
+.nm-list a:hover em{text-decoration:underline;text-underline-offset:4px}
+.nm-list a:focus-visible{outline-offset:-2px}
+@media(max-width:860px){
+  .nm-list{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}
+  .nm-list li:nth-child(3){border-left:0}
+  .nm-list li:nth-child(3) a{padding-left:0}
+  .nm-list a{padding:2px 16px 4px}
+}
+@media(max-width:400px){.nm-list a{gap:2px 12px;padding:2px 10px 4px}.nm-list em{font-size:15.5px}}
 
 /* ---------- 분야 타일 ---------- */
 .ptiles{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));height:clamp(440px,40vw,600px);background:#05070D}
@@ -428,11 +433,11 @@ a.avatar:hover{box-shadow:0 0 0 3px var(--accent-soft),0 0 0 5px var(--accent)}
 .faq .ans b{color:var(--ink);font-weight:700}
 
 /* ---------- 문의 ---------- */
-.contact{position:relative;overflow:hidden;isolation:isolate;background:var(--accent);color:#fff}
+.contact{position:relative;overflow:hidden;isolation:isolate;background:var(--ink);color:#fff}
 /* 커다란 m 표시가 천천히 그려집니다. */
-.ct-mark{position:absolute;z-index:-1;right:-120px;top:50%;width:640px;height:640px;margin-top:-320px;pointer-events:none;color:rgba(255,255,255,.2)}
+.ct-mark{position:absolute;z-index:-1;right:-120px;top:50%;width:640px;height:640px;margin-top:-320px;pointer-events:none;color:rgba(255,255,255,.12)}
 .ct-mark .mark{width:100%;height:100%;stroke-width:1.4}
-.ct-mark .glow{stroke:rgba(255,255,255,.55);stroke-dasharray:22 78;animation:markrun 7s linear infinite}
+.ct-mark .glow{stroke:rgba(255,255,255,.42);stroke-dasharray:22 78;animation:markrun 7s linear infinite}
 .contact-in{max-width:1200px;margin:0 auto;padding:110px 24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:start}
 .contact :focus-visible{outline-color:#fff}
 .ck{margin-bottom:10px;font-size:clamp(30px,3.6vw,46px);font-weight:800;letter-spacing:.02em}
@@ -575,7 +580,7 @@ a.avatar:hover{box-shadow:0 0 0 3px var(--accent-soft),0 0 0 5px var(--accent)}
 .fig-doc .ln.w7{width:70%}.fig-doc .ln.w5{width:52%}.fig-doc .ln.w8{width:84%}
 /* 근거 문장에 형광펜이 왼쪽부터 칠해집니다. */
 .fig-doc .hl{position:relative;z-index:0;display:block;margin:7px 0;padding:3px 6px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fig-doc .hl::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:4px;background:rgba(186,68,25,.18);transform-origin:left center}
+.fig-doc .hl::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:4px;background:rgba(20,23,31,.1);transform-origin:left center}
 .reveal-ready .step.rv .fig-doc .hl::before{transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.7,.2,1) .5s}
 .reveal-ready .step.rv.in .fig-doc .hl::before{transform:none}
 .fig-tab table{width:100%;border-collapse:collapse}
@@ -659,6 +664,74 @@ a.avatar:hover{box-shadow:0 0 0 3px var(--accent-soft),0 0 0 5px var(--accent)}
   border-left:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(-45deg)}
 .checklist b{color:var(--ink)}
 
+
+/* ---------- 소개: MEVI 한눈에 ---------- */
+.overview{max-width:960px;margin:64px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.overview div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:6px 24px;padding:17px 26px;border-top:1px solid var(--line);align-items:baseline}
+.overview div:first-child{border-top:0}
+.overview dt{font-size:15px;font-weight:700;color:var(--ink-3)}
+.overview dd{font-size:16px;font-weight:600;color:var(--ink);line-height:1.65}
+.overview dd small{font-size:14.5px;font-weight:500;color:var(--ink-2)}
+.overview a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:620px){.overview div{grid-template-columns:1fr;gap:2px;padding:15px 18px}}
+
+/* ---------- 소개: 이름에 담은 뜻 ---------- */
+.letters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+.letter{padding:4px 30px 8px;border-left:1px solid var(--line)}
+.letter:first-child{border-left:0;padding-left:0}
+.letter b{display:block;font-size:clamp(84px,9vw,132px);font-weight:800;line-height:.9;letter-spacing:-.04em;color:var(--ink)}
+.letter .w{display:block;margin-top:22px;font-size:15px;font-weight:700;color:var(--ink-3)}
+.letter h3{margin-top:4px;font-size:21px;font-weight:800;letter-spacing:-.035em}
+.letter p{margin-top:10px;font-size:15.5px;line-height:1.75;color:var(--ink-2)}
+@media(max-width:1000px){.letters{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:44px}.letter:nth-child(3){border-left:0;padding-left:0}}
+@media(max-width:560px){.letters{grid-template-columns:1fr;row-gap:36px}.letter{border-left:0;padding:0}}
+
+/* ---------- 소개: 로고 ---------- */
+.logo-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+@media(max-width:960px){.logo-grid{grid-template-columns:1fr;gap:36px}}
+.logo-show{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.logo-show .p{display:grid;place-items:center;border-radius:var(--r);padding:34px 20px}
+.logo-show .big{grid-column:1/-1;min-height:clamp(240px,26vw,340px);background:var(--surface);border:1px solid var(--line)}
+.logo-show .big .mark{width:clamp(130px,14vw,190px);height:auto;color:var(--ink)}
+.logo-show .big .mark .glow{stroke:#9AA3B5;stroke-dasharray:14 86;animation:markrun 4.2s linear infinite}
+.logo-show .lt{background:var(--surface);border:1px solid var(--line)}
+.logo-show .dk{background:var(--ink)}
+.logo-show img{display:block;width:min(200px,80%);height:auto}
+.logo-text .fact:last-of-type{border-bottom:1px solid var(--line)}
+.dl{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+
+/* ---------- 홈: MEVI가 만드는 서비스 ---------- */
+.svc{padding:0 0 110px;background:#fff}
+.svc-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+@media(max-width:860px){.svc-list{grid-template-columns:1fr}}
+.svc-list a{display:block}
+.svc-list .sty-thumb{aspect-ratio:16/8}
+.svc-card .head{display:flex;align-items:center;gap:14px;margin-top:22px}
+.svc-card .appico{width:48px;height:48px;border-radius:12px;box-shadow:0 0 0 1px var(--line)}
+.svc-card .name{display:block;font-size:22px;font-weight:800;letter-spacing:-.035em;line-height:1.2}
+.svc-card .kr{display:block;font-size:14px;font-weight:600;color:var(--ink-3);margin-top:2px}
+.svc-card .desc{display:block;margin-top:14px;font-size:16px;line-height:1.75;color:var(--ink-2);max-width:52ch}
+.svc-card .st{display:block;margin-top:12px;font-size:14px;font-weight:700;color:var(--ink)}
+.svc-list a:hover .name{text-decoration:underline;text-underline-offset:4px}
+
+/* ---------- 서비스: 두 서비스 줄 ---------- */
+.svc-row{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px;align-items:center}
+.svc-row+.svc-row{margin-top:96px}
+.svc-row.rev .svc-media{order:2}
+@media(max-width:960px){.svc-row{grid-template-columns:1fr;gap:28px}.svc-row.rev .svc-media{order:0}.svc-row+.svc-row{margin-top:72px}}
+.svc-media{position:relative;overflow:hidden;border-radius:8px;aspect-ratio:16/10;background:#0B0F1C}
+.svc-media>i{position:absolute;inset:0;background:var(--img) center/cover no-repeat;filter:brightness(.6)}
+.svc-media img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);display:block;height:auto;border-radius:8px 8px 0 0;box-shadow:0 20px 50px -20px rgba(0,0,0,.7)}
+.svc-media img.desk{width:80%}
+.svc-media img.phone{width:31%;border-radius:18px 18px 0 0}
+.svc-text .appico{width:56px;height:56px;border-radius:14px;box-shadow:0 0 0 1px var(--line)}
+.svc-text h3{margin-top:18px;font-size:clamp(28px,3vw,38px);font-weight:800;letter-spacing:-.04em;line-height:1.15}
+.svc-text h3 small{display:block;margin-top:8px;font-size:15px;font-weight:700;letter-spacing:.2em;word-spacing:-.2em;color:var(--ink-3)}
+.svc-text p{margin-top:16px;font-size:16.5px;line-height:1.8;color:var(--ink-2)}
+.svc-text .meta{margin-top:14px;font-size:14px;font-weight:600;color:var(--ink-3)}
+.svc-text .checklist{margin-top:18px}
+.svc-text .dlrow{justify-content:flex-start}
+
 /* ---------- 소식 ---------- */
 .newshead{text-align:center;margin-bottom:8px}
 .newshead h1{margin:0 0 14px;font-size:clamp(30px,3.4vw,46px);font-weight:800;letter-spacing:-.04em}
@@ -724,7 +797,7 @@ footer.ft{border-top:1px solid #E6E8EE;background:#fff;color:var(--ink-2);font-s
 @keyframes lineDown{from{transform:scaleY(0)}to{transform:none}}
 @keyframes devIn{from{opacity:0;transform:translateY(46px) scale(.97)}to{opacity:1;transform:none}}
 @keyframes devFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes nowPulse{0%{box-shadow:0 0 0 0 rgba(186,68,25,.45)}100%{box-shadow:0 0 0 14px rgba(186,68,25,0)}}
+@keyframes nowPulse{0%{box-shadow:0 0 0 0 rgba(20,23,31,.4)}100%{box-shadow:0 0 0 14px rgba(20,23,31,0)}}
 .view{animation:fadeIn .55s ease both}
 
 @media (prefers-reduced-motion:reduce){
@@ -747,5 +820,6 @@ footer.ft{border-top:1px solid #E6E8EE;background:#fff;color:var(--ink-2);font-s
   .hist-list>li.now::before{animation:none}
   .reveal-ready .card .bfill{transition:none;width:var(--v)}
   .reveal-ready .step.rv .fig-doc .hl::before{transform:none;transition:none}
+  .logo-show .big .mark .glow{animation-duration:8s}
   .faq summary::after{transition:none}
 }

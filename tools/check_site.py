@@ -22,7 +22,7 @@ import threading
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT, 'site')
-ROUTES = ['', 'about', 'campusscanner', 'swapstay', 'tech', 'proof', 'news']
+ROUTES = ['', 'about', 'services', 'campusscanner', 'swapstay', 'work', 'people', 'news']
 BROWSERS = [
     r'C:\Program Files\Google\Chrome\Application\chrome.exe',
     r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',

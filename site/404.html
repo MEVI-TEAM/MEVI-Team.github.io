@@ -10,7 +10,7 @@
 /* /about 처럼 들어온 주소는 /#/about 화면으로 보냅니다. */
 (function(){
   var p = location.pathname.replace(/^\/+|\/+$/g, "");
-  if(/^(about|campusscanner|swapstay|tech|proof|news)(\/(release|dev|team))?$/.test(p)) location.replace("/#/" + p);
+  if(/^(about|services|campusscanner|swapstay|work|people|news)(\/(release|dev|team))?$/.test(p)) location.replace("/#/" + p);
 })();
 </script>
 <style>

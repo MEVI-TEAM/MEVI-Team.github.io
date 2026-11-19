@@ -147,7 +147,7 @@ window.addEventListener("scroll", function(){
 
 /* ============================================================
    5. 화면 전환
-      #/about, #/campusscanner, #/swapstay, #/tech, #/proof, #/news(/분류) 로 화면을 엽니다.
+      #/about, #/services, #/campusscanner, #/swapstay, #/work, #/people, #/news(/분류) 로 화면을 엽니다.
       그 밖의 #이름은 그 구역이 들어 있는 화면을 연 뒤 그 자리로 갑니다.
    ============================================================ */
 var VIEWS = {};
@@ -155,13 +155,14 @@ $$("[data-view]").forEach(function(v){ VIEWS[v.getAttribute("data-view")] = v; }
 var VIEW_TITLE = {
   home: document.title,
   about: "소개 · MEVI",
+  services: "서비스 · MEVI",
   campusscanner: "CampusScanner · MEVI",
   swapstay: "SwapStay · MEVI",
-  tech: "기술 · MEVI",
-  proof: "검증 · MEVI",
+  work: "일하는 방식 · MEVI",
+  people: "사람들 · MEVI",
   news: "소식 · MEVI"
 };
-var MENU_OF = {about:"#/about", campusscanner:"#/campusscanner", swapstay:"#/campusscanner", tech:"#/tech", proof:"#/proof", news:"#/news"};
+var MENU_OF = {about:"#/about", services:"#/services", campusscanner:"#/services", swapstay:"#/services", work:"#/work", people:"#/people", news:"#/news"};
 var M1 = $$(".m1");
 function jumpTo(y){
   var root = document.documentElement, prev = root.style.scrollBehavior;
@@ -285,13 +286,13 @@ function mvTick(dt){
 
 /* ============================================================
    7. 첫 화면의 빛의 선
-      MEVI: 여러 점이 차례로 이어지는 선(팀이 하는 일, 점과 점을 잇기)
-      CampusScanner: 한 점에서 여러 도시로 뻗는 선(떠나는 길)
-      SwapStay: 두 집 사이를 서로 반대로 오가는 선(맞교환)
+      net: 여러 점이 차례로 이어지는 선(MEVI, Valuable Innovation)
+      out: 한 점에서 여러 곳으로 뻗어 나가는 선(More Evolution)
+      swap: 두 점 사이를 서로 반대로 오가는 선(지금은 쓰지 않지만 남겨 둡니다)
       사진 위에 빛처럼 더해지고(mix-blend-mode: screen), 멈춤 버튼을 누르면 그대로 멈춥니다.
    ============================================================ */
 var cv = $("#mvCanvas"), cx = cv.getContext("2d");
-var WARM = "255,236,214", GLOW = "255,176,138";
+var WARM = "255,255,255", GLOW = "214,226,255";
 var SC = {kind:"net", t:0, w:0, h:0, arcs:[], nodes:[], next:0, idx:0, seed:7};
 function rnd(){ SC.seed = (SC.seed * 16807) % 2147483647; return (SC.seed - 1) / 2147483646; }
 function sizeHero(){
