@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MEVI: AI와 데이터로 실제로 쓰이는 서비스를 만드는 팀</title>
+<meta name="description" content="MEVI는 AI·데이터·소프트웨어로 실제로 쓸 수 있는 서비스를 만드는 동국대학교 학생 팀입니다. 해외 대학 단기 프로그램 탐색 서비스 CampusScanner와 국내 집 교환 서비스 SwapStay를 만듭니다.">
+<link rel="canonical" href="https://mevi-team.github.io/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#FFFFFF">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="MEVI">
+<meta property="og:url" content="https://mevi-team.github.io/">
+<meta property="og:title" content="MEVI: AI와 데이터로 실제로 쓰이는 서비스를 만드는 팀">
+<meta property="og:description" content="해외 대학 단기 프로그램 탐색 서비스 CampusScanner와 국내 집 교환 서비스 SwapStay를 만듭니다.">
+<meta property="og:image" content="https://mevi-team.github.io/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mevi-team.github.io/#org","name":"MEVI","alternateName":"More Evolution, Valuable Innovation","url":"https://mevi-team.github.io/","email":"mevi.support@gmail.com","description":"AI·데이터·소프트웨어로 실제로 쓸 수 있는 서비스를 만드는 팀","sameAs":["https://github.com/MEVI-TEAM"]},{"@type":"WebSite","@id":"https://mevi-team.github.io/#website","url":"https://mevi-team.github.io/","name":"MEVI","inLanguage":"ko","publisher":{"@id":"https://mevi-team.github.io/#org"}},{"@type":"WebApplication","name":"SwapStay","url":"https://swapstay.pages.dev/","applicationCategory":"TravelApplication","description":"서로의 집을 바꿔 머무는 국내 집 교환 서비스","inLanguage":"ko","author":{"@id":"https://mevi-team.github.io/#org"}}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- 글꼴 CSS가 화면 전환 스크립트를 붙잡지 않도록 따로 불러옵니다. -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+:root{
+--ph-hero-mevi:url("/assets/img/hero-mevi.webp");
+--ph-hero-cs:url("/assets/img/hero-cs.webp");
+--ph-hero-ss:url("/assets/img/hero-ss.webp");
+--ph-band-about:url("/assets/img/band-about.webp");
+--ph-band-tech:url("/assets/img/band-tech.webp");
+--ph-band-proof:url("/assets/img/band-proof.webp");
+--ph-tile-about:url("/assets/img/tile-about.webp");
+--ph-tile-service:url("/assets/img/tile-service.webp");
+--ph-tile-tech:url("/assets/img/tile-tech.webp");
+--ph-tile-proof:url("/assets/img/tile-proof.webp");
+--ph-tile-news:url("/assets/img/tile-news.webp");
+--ph-who-1:url("/assets/img/who-1.webp");
+--ph-who-2:url("/assets/img/who-2.webp");
+--ph-who-3:url("/assets/img/who-3.webp");
+--ph-who-4:url("/assets/img/who-4.webp");
+--ph-val-1:url("/assets/img/val-1.webp");
+--ph-val-2:url("/assets/img/val-2.webp");
+--ph-val-3:url("/assets/img/val-3.webp");
+--ph-scr-cs-desk:url("/assets/img/scr-cs-desk.webp");
+}
+</style>
+</head>
+<body class="view-home">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="gnb is-top" id="gnb">
+  <div class="gnb-in">
+    <a class="logo" href="#/" aria-label="MEVI 홈"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M7 38V22a8.5 8.5 0 0 1 17 0M24 38V18a8.5 8.5 0 0 1 17 0v20"/></svg><b>MEVI</b></a>
+    <nav class="gnbnav" id="gnbNav" aria-label="주 메뉴">
+      <ul class="menu">
+        <li><a class="m1" href="#/about">소개</a>
+          <ul class="sub">
+            <li><a href="#intro">MEVI 소개</a></li>
+            <li><a href="#values">우리의 가치</a></li>
+            <li><a href="#history">걸어온 길</a></li>
+            <li><a href="#team">팀</a></li>
+            <li><a href="#contact">문의</a></li>
+          </ul>
+        </li>
+        <li><a class="m1" href="#/campusscanner">서비스</a>
+          <ul class="sub">
+            <li><a href="#/campusscanner">CampusScanner</a></li>
+            <li><a href="#/swapstay">SwapStay</a></li>
+            <li><a href="https://swapstay.pages.dev/" target="_blank" rel="noopener">SwapStay 데모<span class="sr"> (새 창)</span></a></li>
+          </ul>
+        </li>
+        <li><a class="m1" href="#/tech">기술</a>
+          <ul class="sub">
+            <li><a href="#how">만드는 과정</a></li>
+            <li><a href="#stack">기술 구성</a></li>
+            <li><a href="#principles">설계 원칙</a></li>
+          </ul>
+        </li>
+        <li><a class="m1" href="#/proof">검증</a>
+          <ul class="sub">
+            <li><a href="#data-review">데이터 검수</a></li>
+            <li><a href="#rule-tests">규칙 시험</a></li>
+            <li><a href="#screen-checks">화면 점검</a></li>
+          </ul>
+        </li>
+        <li><a class="m1" href="#/news">소식</a>
+          <ul class="sub">
+            <li><a href="#/news">전체 소식</a></li>
+            <li><a href="#/news/release">공개</a></li>
+            <li><a href="#/news/dev">개발</a></li>
+            <li><a href="#/news/team">팀</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="util"><a href="#/campusscanner">서비스 보기</a><i aria-hidden="true"></i><a href="#contact">문의</a></div>
+    <button class="burger" id="navToggle" type="button" aria-expanded="false" aria-controls="navmenu" aria-label="메뉴 열기"><span></span><span></span></button>
+  </div>
+  <div class="megabg" aria-hidden="true"></div>
+</header>
+
+<div class="mmenu" id="navmenu">
+  <nav aria-label="전체 메뉴">
+    <div class="mm-g"><a href="#/about">소개</a><ul><li><a href="#intro">MEVI 소개</a></li><li><a href="#values">우리의 가치</a></li><li><a href="#history">걸어온 길</a></li><li><a href="#team">팀</a></li><li><a href="#contact">문의</a></li></ul></div>
+    <div class="mm-g"><a href="#/campusscanner">서비스</a><ul><li><a href="#/campusscanner">CampusScanner</a></li><li><a href="#/swapstay">SwapStay</a></li><li><a href="https://swapstay.pages.dev/" target="_blank" rel="noopener">SwapStay 데모<span class="sr"> (새 창)</span></a></li></ul></div>
+    <div class="mm-g"><a href="#/tech">기술</a><ul><li><a href="#how">만드는 과정</a></li><li><a href="#stack">기술 구성</a></li><li><a href="#principles">설계 원칙</a></li></ul></div>
+    <div class="mm-g"><a href="#/proof">검증</a><ul><li><a href="#data-review">데이터 검수</a></li><li><a href="#rule-tests">규칙 시험</a></li><li><a href="#screen-checks">화면 점검</a></li></ul></div>
+    <div class="mm-g"><a href="#/news">소식</a><ul><li><a href="#/news">전체 소식</a></li><li><a href="#/news/release">공개</a></li><li><a href="#/news/dev">개발</a></li><li><a href="#/news/team">팀</a></li></ul></div>
+    <div class="mm-util"><a class="btn btn-primary btn-sm" href="#/campusscanner">서비스 보기</a><a class="btn btn-ghost btn-sm" href="#contact">문의</a></div>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ======================= 홈 ======================= -->
+<div class="view" data-view="home" id="home">
+
+<section class="mv" id="mv" aria-roledescription="carousel" aria-label="MEVI 첫 화면">
+  <h1 class="sr">MEVI, AI와 데이터로 실제로 쓰이는 서비스를 만드는 팀</h1>
+  <div class="mvbgs" aria-hidden="true">
+    <div class="mvbg is-on"><i style="--img:var(--ph-hero-mevi)"></i></div>
+    <div class="mvbg"><i style="--img:var(--ph-hero-cs)"></i></div>
+    <div class="mvbg"><i class="dim" style="--img:var(--ph-hero-ss)"></i></div>
+  </div>
+  <div class="mvshade" aria-hidden="true"></div>
+  <canvas class="mvcv" id="mvCanvas" aria-hidden="true"></canvas>
+  <div class="mvtexts">
+    <div class="mvtext is-on" role="group" aria-roledescription="슬라이드" aria-label="1 / 3" data-scene="net">
+      <p class="mvlogo"><span class="mvbrand"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path class="base" d="M7 38V22a8.5 8.5 0 0 1 17 0M24 38V18a8.5 8.5 0 0 1 17 0v20"/><path class="glow" pathLength="100" d="M7 38V22a8.5 8.5 0 0 1 17 0M24 38V18a8.5 8.5 0 0 1 17 0v20"/></svg>MEVI</span></p>
+      <p class="mvtag">AI와 데이터로, 실제로 쓰이는 서비스를</p>
+      <a class="mvbtn" href="#/about">자세히 보기</a>
+    </div>
+    <div class="mvtext" role="group" aria-roledescription="슬라이드" aria-label="2 / 3" data-scene="out" inert aria-hidden="true">
+      <p class="mvlogo"><span class="mvname">CampusScanner</span><span class="mvprod">캠퍼스스캐너</span></p>
+      <p class="mvtag">방학에 떠나는 해외 대학 단기 프로그램을, 공식 출처로 한곳에서</p>
+      <a class="mvbtn" href="#/campusscanner">자세히 보기</a>
+    </div>
+    <div class="mvtext" role="group" aria-roledescription="슬라이드" aria-label="3 / 3" data-scene="swap" inert aria-hidden="true">
+      <p class="mvlogo"><span class="mvname">SwapStay</span><span class="mvprod">국내 집 교환</span></p>
+      <p class="mvtag">같은 기간, 서로의 집을 바꿔 머무는 여행</p>
+      <a class="mvbtn" href="#/swapstay">자세히 보기</a>
+    </div>
+  </div>
+  <div class="mvctl">
+    <div class="mvdots" role="group" aria-label="슬라이드 선택">
+      <button class="mvdot is-on" type="button" aria-label="1번 슬라이드, MEVI" aria-current="true"><b><i></i></b></button>
+      <button class="mvdot" type="button" aria-label="2번 슬라이드, CampusScanner"><b><i></i></b></button>
+      <button class="mvdot" type="button" aria-label="3번 슬라이드, SwapStay"><b><i></i></b></button>
+    </div>
+    <button class="mvpause" id="mvPause" type="button" aria-label="자동 넘김 멈추기"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z"/><path class="i-play" d="M8 5v14l11-7z"/></svg></button>
+  </div>
+</section>
+
+<section class="nws" aria-labelledby="nwsH">
+  <div class="nws-in">
+    <div class="nws-head"><h2 id="nwsH">새 소식</h2><a class="more" href="#/news">더 보기 +</a></div>
+    <ul class="nws-list" data-stagger>
+      <li class="rv"><a href="#/campusscanner"><time datetime="2026-11-19">2026.11.19</time><b>CampusScanner, Google 로그인과 계정별 저장 준비</b><span>Google 계정으로 로그인하면 관심 조건과 저장한 프로그램을 계정에 남길 수 있게 준비했습니다.</span></a></li>
+      <li class="rv"><a href="#data-review"><time datetime="2026-11-19">2026.11.19</time><b>CampusScanner, 아시아·미주 프로그램까지 넓혀 검수 중</b><span>2027년 과정을 학교 공식 근거와 함께 모으고, 검수를 거쳐 하나씩 더하고 있습니다.</span></a></li>
+      <li class="rv"><a href="#/campusscanner"><time datetime="2026-11-18">2026.11.18</time><b>CampusScanner 홈과 지역 탐색을 새로 만들었습니다</b><span>사진으로 넘겨 보는 첫 화면에서 바로 찾고, 지도에서 나라와 도시를 선택해 봅니다.</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="dlc" aria-labelledby="dlcH">
+  <div class="dlc-in"><div class="dlc-box">
+    <div class="nws-head"><h2 id="dlcH">지금까지 쌓은 커밋</h2><span class="dlc-src">GitHub 기준 · 2026.11.19</span></div>
+    <ul class="dlc-list">
+      <li><div class="it"><span class="k">전체</span><b><span class="cnt" data-to="613">613</span><small>개</small></b></div></li>
+      <li><a class="it" href="#/campusscanner"><span class="k">CampusScanner</span><b><span class="cnt" data-to="312">312</span><small>개</small></b></a></li>
+      <li><a class="it" href="#/swapstay"><span class="k">SwapStay</span><b><span class="cnt" data-to="301">301</span><small>개</small></b></a></li>
+    </ul>
+  </div></div>
+</section>
+
+<section class="ptiles" id="ptiles" aria-label="MEVI 둘러보기">
+  <a class="pt is-on" href="#/about"><span class="pt-img" style="--img:var(--ph-tile-about)" aria-hidden="true"></span><span class="pt-t">소개</span><span class="pt-line" aria-hidden="true"></span><span class="pt-s">우리 이야기와 가치</span></a>
+  <a class="pt" href="#/campusscanner"><span class="pt-img" style="--img:var(--ph-tile-service)" aria-hidden="true"></span><span class="pt-t">서비스</span><span class="pt-line" aria-hidden="true"></span><span class="pt-s">CampusScanner · SwapStay</span></a>
+  <a class="pt" href="#/tech"><span class="pt-img" style="--img:var(--ph-tile-tech)" aria-hidden="true"></span><span class="pt-t">기술</span><span class="pt-line" aria-hidden="true"></span><span class="pt-s">공식 출처에서 화면까지</span></a>
+  <a class="pt" href="#/proof"><span class="pt-img" style="--img:var(--ph-tile-proof)" aria-hidden="true"></span><span class="pt-t">검증</span><span class="pt-line" aria-hidden="true"></span><span class="pt-s">근거를 남기고 다시 확인합니다</span></a>
+  <a class="pt" href="#/news"><span class="pt-img" style="--img:var(--ph-tile-news)" aria-hidden="true"></span><span class="pt-t">소식</span><span class="pt-line" aria-hidden="true"></span><span class="pt-s">공개와 개발 이야기</span></a>
+</section>
+
+<section class="sty" aria-labelledby="styH">
+  <div class="sty-in">
+    <div class="sty-head"><h2 id="styH">MEVI 이야기</h2><a class="more" href="#/news">전체 소식 +</a></div>
+    <ul class="sty-list" data-stagger>
+      <li class="rv"><a href="#/campusscanner"><span class="sty-thumb"><i style="--img:var(--ph-scr-cs-desk)"></i></span><span class="sty-tag">서비스</span><span class="sty-title">교환학생 대신, 방학에 떠나는 해외 대학 프로그램</span></a></li>
+      <li class="rv"><a href="#/swapstay"><span class="sty-thumb"><i style="--img:var(--ph-who-3)"></i></span><span class="sty-tag">서비스</span><span class="sty-title">숙박비 대신 집을 바꿔 머무는 국내 집 교환</span></a></li>
+      <li class="rv"><a href="#data-review"><span class="sty-thumb"><i style="--img:var(--ph-band-proof)"></i></span><span class="sty-tag">검증</span><span class="sty-title">모은 사람과 확인한 사람이 다릅니다</span></a></li>
+      <li class="rv"><a href="#rule-tests"><span class="sty-thumb"><i style="--img:var(--ph-band-tech)"></i></span><span class="sty-tag">기술</span><span class="sty-title">약속은 문서가 아니라 시험으로 지킵니다</span></a></li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<!-- ======================= 소개 ======================= -->
+<div class="view" data-view="about" id="about" hidden>
+
+<header class="pgband">
+  <span class="pgbg" style="--img:var(--ph-band-about)" aria-hidden="true"></span>
+  <div>
+    <p class="pgk">MEVI 소개</p>
+    <h1>실제로 쓰이는 서비스를<br>만드는 팀, MEVI</h1>
+  </div>
+  <span class="pgline" aria-hidden="true"></span>
+</header>
+
+<section class="sec" id="intro">
+  <div class="wrap">
+    <div class="sh rv"><h2>우리 이야기</h2><p>흩어진 정보와 비어 있는 방법, 그 빈칸을 서비스로 채웁니다</p></div>
+    <p class="story-p rv">해외 대학의 방학 프로그램은 학교마다 다른 페이지에 흩어져 있고, 일정과 비용은 해마다 바뀝니다. 집을 바꿔 머무는 여행은 해외에서는 익숙하지만, 국내에서는 믿고 맡길 방법이 마땅치 않습니다.</p>
+    <p class="story-p rv">MEVI는 동국대학교 학생 두 명이 2026년 10월에 만든 팀입니다. 이름은 More Evolution, Valuable Innovation의 머리글자로, 계속 나아지면서 쓸모 있는 것을 만들자는 뜻입니다. 지금은 CampusScanner와 SwapStay를 만들고 있습니다.</p>
+    <div class="story-gap"></div>
+    <div class="stats" data-stagger>
+      <div class="stat rv">
+        <b>1~<span class="cnt" data-to="6">6</span>주</b>
+        <p>CampusScanner가 다루는 해외 대학 단기 프로그램의 기간입니다. 교환학생처럼 한 학기를 비우지 않고, 방학 동안 해외 대학에서 수업을 듣습니다.</p>
+        <cite>CampusScanner 소개</cite>
+      </div>
+      <div class="stat rv">
+        <b><span class="cnt" data-to="50000">50,000</span>원</b>
+        <p>SwapStay에서 교환이 확정되면 두 회원이 각자 내는 정액 서비스료입니다. 머무는 날수와 집 크기에 상관없이 같고, 회원끼리는 돈을 주고받지 않습니다.</p>
+        <cite>SwapStay 도움말</cite>
+      </div>
+    </div>
+    <div class="gaps rv" role="list" aria-label="지금까지의 방법과 MEVI의 서비스">
+      <div class="gaprow" role="listitem"><span class="g1">학교 홈페이지</span><span class="g2">하나하나 찾아야 합니다</span><span class="g3">학교마다 페이지 구조가 다르고, 일정·비용·마감이 해마다 바뀝니다.</span></div>
+      <div class="gaprow" role="listitem"><span class="g1">모음 사이트와 블로그</span><span class="g2">출처가 섞여 있습니다</span><span class="g3">지난해 정보나 확인되지 않은 값이 그대로 남아 있을 때가 있습니다.</span></div>
+      <div class="gaprow" role="listitem"><span class="g1">숙소 예약</span><span class="g2">머무는 만큼 듭니다</span><span class="g3">머무는 날만큼 숙박비가 들고, 여행하는 동안 내 집은 비어 있습니다.</span></div>
+      <div class="gaprow us" role="listitem"><span class="g1">MEVI의 서비스</span><span class="g2">근거와 규칙으로</span><span class="g3">CampusScanner는 학교 공식 출처만 근거로 보여 주고, SwapStay는 같은 기간 서로의 집을 바꿔 회원끼리 돈이 오가지 않게 합니다.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="who">
+  <div class="wrap">
+    <div class="sh rv"><h2>이런 분들을 위해 만듭니다</h2><p>배우러 떠나고, 바꿔 머무는 사람들을 위해</p></div>
+    <div class="whocards" data-stagger>
+      <article class="whocard rv"><span class="who-ph" aria-hidden="true"><i style="--img:var(--ph-who-1)"></i></span><div class="who-b"><span class="k">01</span><h3>교환학생이 부담스러운 대학생</h3><p>한 학기를 통째로 비우기 어렵다면, 방학 동안 해외 대학에서 수업을 듣는 단기 프로그램이 있습니다. CampusScanner가 한곳에 모읍니다.</p></div></article>
+      <article class="whocard rv"><span class="who-ph" aria-hidden="true"><i style="--img:var(--ph-who-2)"></i></span><div class="who-b"><span class="k">02</span><h3>떠나기 전에 꼼꼼히 비교하고 싶은 사람</h3><p>일정, 참가비, 지원 마감을 나란히 놓고 비교합니다. 확인되지 않은 값은 '미확인'으로 따로 보여 줍니다.</p></div></article>
+      <article class="whocard rv"><span class="who-ph" aria-hidden="true"><i style="--img:var(--ph-who-3)"></i></span><div class="who-b"><span class="k">03</span><h3>다른 도시에서 살아 보고 싶은 사람</h3><p>숙소 대신 그 동네에 사는 회원의 집에서 지냅니다. 같은 기간, 그 회원은 우리 집에서 지냅니다.</p></div></article>
+      <article class="whocard rv"><span class="who-ph" aria-hidden="true"><i style="--img:var(--ph-who-4)"></i></span><div class="who-b"><span class="k">04</span><h3>여행 동안 집을 비워 두는 사람</h3><p>비워 두는 기간에 내가 머물 집과 맞바꿉니다. 정확한 주소는 교환이 확정된 상대에게만 보입니다.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="vals" id="values" aria-labelledby="valsH">
+  <div class="vals-bgs" aria-hidden="true"><i class="is-on" style="--img:var(--ph-val-1)"></i><i style="--img:var(--ph-val-2)"></i><i style="--img:var(--ph-val-3)"></i></div>
+  <h2 class="vals-h" id="valsH">우리의 가치</h2>
+  <div class="vals-cols">
+    <article class="val is-on" tabindex="0"><h3>근거로 말합니다</h3><p>학교 공식 페이지와 PDF만 근거로 삼고, 값마다 출처와 확인일을 남깁니다. 확인되지 않은 값은 짐작해 채우지 않고 비워 둡니다.</p></article>
+    <article class="val" tabindex="0"><h3>약속은 코드로</h3><p>서비스 규칙은 화면 문구에만 있지 않습니다. 데이터베이스가 규칙을 지키고, 규칙마다 그것을 확인하는 시험이 있습니다.</p></article>
+    <article class="val" tabindex="0"><h3>계속 나아집니다</h3><p>작게 만들어 먼저 보여 주고, 쓰는 사람의 의견과 시험 결과로 다시 고칩니다. MEVI라는 이름에 담은 뜻입니다.</p></article>
+  </div>
+</section>
+
+<section class="sec" id="history">
+  <div class="sh rv"><h2>우리가 걸어온 길</h2><p>2026년 가을, 두 서비스를 함께 만들고 있습니다</p></div>
+  <div class="hist-wrap rv">
+    <button class="hist-nav prev" id="histPrev" type="button" aria-label="이전 기간"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
+    <ol class="hist-list" id="histList" tabindex="0" aria-label="2026년 연혁" data-stagger>
+      <li class="rv"><h3>10.12<small>~ 15</small></h3><ul><li><b>SwapStay</b> 개발 시작 (12일)</li><li>팀 이름을 <b>MEVI</b>로 정함 (14일)</li><li>GitHub 조직 MEVI-TEAM을 열고 CampusScanner 개발 시작 (15일)</li><li>SwapStay 저장소를 MEVI로 옮김 (15일)</li></ul></li>
+      <li class="rv"><h3>10.19<small>~ 21</small></h3><ul><li>CampusScanner 목록·필터·상세 화면 (19일)</li><li><b>SwapStay 소개 페이지·데모 공개</b> (19일)</li><li>CampusScanner 저장·비교 화면 (20일)</li><li>지원 마감 임박 순 정렬 (21일)</li></ul></li>
+      <li class="rv"><h3>10.23<small>~ 29</small></h3><ul><li>프로그램 한국어 요약과 상세 소개 (23일)</li><li>공식 출처 수집 파이프라인 시작 (26일)</li><li>서비스 이름을 <b>CampusScanner</b>로 바꿈 (29일)</li></ul></li>
+      <li class="rv"><h3>11.02<small>~ 11</small></h3><ul><li>수집 파이프라인의 검수 문서와 초안 묶음 (2일)</li><li>저장소 이름도 CampusScanner로 (2일)</li><li>사진 중심의 새 홈 디자인 논의 시작 (11일)</li></ul></li>
+      <li class="now rv"><h3>11.17<small>~ 19</small></h3><ul><li>SwapStay 시험용 서버에서 가입부터 환불까지 다시 확인 (17일)</li><li>CampusScanner <b>새 홈과 지역 탐색</b> (18일)</li><li>Google 로그인 준비, 아시아·미주 프로그램 검수 (19일)</li></ul></li>
+    </ol>
+    <button class="hist-nav next" id="histNext" type="button" aria-label="다음 기간"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<section class="sec alt" id="team">
+  <div class="wrap">
+    <div class="sh rv"><h2>MEVI를 만드는 사람들</h2><p>동국대학교 학생 두 명이 개발, 데이터, 디자인을 나누어 맡고 있습니다</p></div>
+    <div class="team" data-stagger>
+      <article class="member rv">
+        <div class="m-head"><a class="avatar" href="https://github.com/amophi" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">도환<img src="https://github.com/amophi.png?size=112" alt="" width="52" height="52" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></a><div><h3>김도환</h3><p class="role">팀장 · 개발 · 디자인</p><a class="m-gh" href="https://github.com/amophi" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>amophi<span class="sr"> (새 창)</span></a></div></div>
+        <dl class="m-roles">
+          <dt>CampusScanner</dt><dd>프로그램 목록과 필터, 상세·저장·비교 화면을 만들었습니다. 사진으로 넘겨 보는 홈과 지역 탐색 지도, 머리글을 다듬고, 키보드 초점과 '본문으로 건너뛰기' 같은 접근성을 챙겼습니다. 수집 파이프라인에서는 값 추출과 검수 문서, 초안 묶음을 만들었습니다.</dd>
+          <dt>SwapStay</dt><dd>서비스 앱 화면과 서버(Supabase), 결제·본인확인(포트원), 알림 메일, 운영 도구를 만들었습니다. 서비스 규칙을 결정 문서로 정리하고 결정마다 시험을 붙였습니다.</dd>
+          <dt>그 밖에</dt><dd>팀 운영과 디자인, 웹사이트</dd>
+        </dl>
+      </article>
+      <article class="member rv">
+        <div class="m-head"><a class="avatar" href="https://github.com/P-garam" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">가람<img src="https://github.com/P-garam.png?size=112" alt="" width="52" height="52" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.remove()"></a><div><h3>박가람</h3><p class="role">개발 · 데이터</p><a class="m-gh" href="https://github.com/P-garam" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>P-garam<span class="sr"> (새 창)</span></a></div></div>
+        <dl class="m-roles">
+          <dt>CampusScanner</dt><dd>저장소와 협업 규칙, 데이터베이스 구조와 공개 읽기 권한을 세웠습니다. 목록·상세·비교·저장의 조회와 필터, 마감 임박 순 정렬을 만들고, Google 로그인과 계정별 저장을 더했습니다.</dd>
+          <dt>데이터</dt><dd>수집 파이프라인의 원문 보관(HTML·PDF)과 근거 검증을 만들었습니다. 유럽에서 아시아와 미주까지 프로그램을 모으고 검수하고 있습니다.</dd>
+          <dt>그 밖에</dt><dd>배포 구성, 출시 점검표, 데이터 검수 절차</dd>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sh rv"><h2>자주 묻는 질문</h2><p>서비스별 질문은 <a href="#cs-faq">CampusScanner</a>, <a href="#ss-faq">SwapStay</a> 페이지에 있습니다</p></div>
+    <div class="faq rv">
+      <details>
+        <summary>CampusScanner는 언제 쓸 수 있나요?</summary>
+        <div class="ans">지금은 공개 베타를 준비하고 있습니다. 문을 열면 <a href="#/news">소식</a>에 먼저 알리겠습니다.</div>
+      </details>
+      <details>
+        <summary>SwapStay는 지금 이용할 수 있나요?</summary>
+        <div class="ans">소개 페이지와 데모는 <a href="https://swapstay.pages.dev/" target="_blank" rel="noopener">swapstay.pages.dev<span class="sr"> (새 창)</span></a>에서 볼 수 있습니다. 데모는 브라우저 안에서만 돌아가고, 실제 가입과 결제는 아직 열지 않았습니다.</div>
+      </details>
+      <details>
+        <summary>CampusScanner의 프로그램 정보는 어디서 오나요?</summary>
+        <div class="ans">대학과 프로그램의 <b>공식 페이지와 PDF</b>만 근거로 씁니다. 값마다 출처와 확인일을 남기고, 모은 사람과 다른 사람이 한 번 더 확인한 뒤에 공개합니다. 지원하기 전에는 학교 공식 페이지에서 꼭 다시 확인해 주세요.</div>
+      </details>
+      <details>
+        <summary>SwapStay에서 회원끼리 돈을 주고받나요?</summary>
+        <div class="ans">아니요. 숙박료, 보증금, 청소비를 주고받지 않습니다. 교환이 확정되면 두 회원이 각자 <b>50,000원</b>의 정액 서비스료만 냅니다.</div>
+      </details>
+      <details>
+        <summary>함께 일하거나 제안할 수 있나요?</summary>
+        <div class="ans">네. 학교·기관과의 협력, 잘못된 정보 제보, 서비스 제안 모두 반갑습니다. <a href="#contact">문의</a>로 연락해 주세요.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="ctH">
+  <div class="ct-mark" aria-hidden="true"><svg class="mark" viewBox="0 0 48 48" focusable="false"><path d="M7 38V22a8.5 8.5 0 0 1 17 0M24 38V18a8.5 8.5 0 0 1 17 0v20"/><path class="glow" pathLength="100" d="M7 38V22a8.5 8.5 0 0 1 17 0M24 38V18a8.5 8.5 0 0 1 17 0v20"/></svg></div>
+  <div class="contact-in">
+    <div>
+      <p class="ck">문의</p>
+      <h2 id="ctH">함께 만들어 주세요</h2>
+      <p class="lede">MEVI의 서비스는 쓰는 분들의 의견으로 자랍니다. 잘못된 정보 제보, 써 본 소감, 협력 제안 모두 반갑습니다.</p>
+      <a class="mail" href="mailto:mevi.support@gmail.com?subject=%5BMEVI%5D%20%EB%AC%B8%EC%9D%98">mevi.support@gmail.com</a>
+      <div class="btns">
+        <a class="btn btn-white" href="mailto:mevi.support@gmail.com?subject=%5BMEVI%5D%20%EB%AC%B8%EC%9D%98"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>메일 보내기</a>
+        <button class="btn btn-line" id="copyMail" type="button" data-mail="mevi.support@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg>주소 복사</button>
+      </div>
+    </div>
+    <div>
+      <article class="ask"><h3>학교·기관</h3><p>단기 프로그램 정보를 바로잡거나 더하고 싶은 학교와 기관의 연락을 기다립니다.</p></article>
+      <article class="ask"><h3>쓰는 분</h3><p>틀린 일정이나 비용, 불편한 점을 알려 주세요. 확인해서 고치겠습니다.</p></article>
+      <article class="ask"><h3>함께하실 분</h3><p>공동 프로젝트나 협업 제안도 메일로 보내 주세요.</p></article>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ======================= CampusScanner ======================= -->
+<div class="view" data-view="campusscanner" id="campusscanner" hidden>
+
+<section class="gs" aria-labelledby="gsCS">
+  <span class="gs-bg" style="--img:var(--ph-hero-cs)" aria-hidden="true"></span>
+  <div class="gs-in">
+    <nav class="gs-nav" aria-label="서비스 선택">
+      <a href="#/campusscanner" aria-current="page"><span class="appico ico-cs" aria-hidden="true"></span><span>CampusScanner</span></a>
+      <a href="#/swapstay"><span class="appico ico-ss" aria-hidden="true"></span><span>SwapStay</span></a>
+    </nav>
+    <div class="gs-visual">
+      <div class="dev-monitor"><div class="scr"><img src="/assets/img/scr-cs-desk.webp" alt="CampusScanner 홈 화면. 사진 위에 '파리에서 비즈니스 배우기'와 프로그램 일정이 보이고, 아래에 국가·시즌·분야 선택 칸이 있습니다." width="1280" height="720" decoding="async"></div><div class="neck"></div><div class="base"></div></div>
+    </div>
+    <div class="gs-info">
+      <h1 id="gsCS">CampusScanner<small>캠퍼스스캐너</small></h1>
+      <p class="gs-meta"><span>웹 서비스</span><span>공개 베타 준비 중</span></p>
+      <p class="gs-desc">방학 동안 열리는 해외 대학의 여름·겨울 학교 같은 단기 프로그램을 한곳에서 찾고, 일정·비용·지원 마감을 학교 공식 출처와 함께 확인합니다.</p>
+      <ul class="gs-checks"><li>공식 출처만</li><li>일정·비용·마감 비교</li><li>주변 도시 여행 추천</li></ul>
+      <p class="gs-dl"><span class="k">지금 단계</span><b>공개 베타 준비</b></p>
+      <div class="gs-btns">
+        <a href="#cs-features"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>기능 보기</a>
+        <a href="mailto:mevi.support@gmail.com?subject=%5BCampusScanner%5D%20%EA%B3%B5%EA%B0%9C%20%EC%86%8C%EC%8B%9D%20%EC%8B%A0%EC%B2%AD"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>공개 소식 받기</a>
+      </div>
+      <p class="gs-ver">2026.10.15 개발 시작 · Next.js · Supabase · Python · <a href="#cs-shots">화면 보기</a> · <a href="#cs-faq">자주 묻는 질문</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cs-features">
+  <div class="wrap">
+    <div class="sh rv"><h2>찾고, 비교하고, 확인합니다</h2><p>학교가 공개한 정보만으로 지원을 판단할 수 있게 만들었습니다</p></div>
+    <div class="shots n4" id="cs-shots">
+      <ul data-stagger>
+        <li class="rv"><img src="/assets/img/scr-cs-home.webp" alt="휴대폰에서 본 CampusScanner 홈. 프로그램 사진과 일정, '이 프로그램 보기' 버튼이 있습니다." width="600" height="1298" loading="lazy" decoding="async"><span>홈</span></li>
+        <li class="rv"><img src="/assets/img/scr-cs-list.webp" alt="프로그램 목록. 빅토리아의 언어·문화 프로그램 카드에 일정, 참가비, 지원 마감이 보입니다." width="600" height="1298" loading="lazy" decoding="async"><span>프로그램 목록</span></li>
+        <li class="rv"><img src="/assets/img/scr-cs-detail.webp" alt="프로그램 상세. 알토대학교 AI·머신러닝 겨울 학교의 사진과 신청 방법 보기 버튼이 있습니다." width="600" height="1298" loading="lazy" decoding="async"><span>프로그램 상세</span></li>
+        <li class="rv"><img src="/assets/img/scr-cs-explore.webp" alt="지역 탐색. 지구본 위에 프로그램이 있는 도시들이 점으로 표시됩니다." width="600" height="1298" loading="lazy" decoding="async"><span>지역 탐색</span></li>
+      </ul>
+    </div>
+    <div class="story-gap"></div>
+    <div class="feats" data-stagger>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><h3>프로그램 둘러보기</h3><p>공개된 프로그램을 카드로 보여 줍니다. 결과가 없을 때와 불러오지 못했을 때를 따로 알려 드립니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg><h3>국가·시즌·연도 필터</h3><p>선택한 조건이 주소에 남아, 새로고침하거나 친구에게 보내도 같은 결과가 나옵니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 3 2.6 15 0 18M12 3c-2.6 3-2.6 15 0 18"/></svg><h3>지역 탐색</h3><p>지구본과 세계지도에서 나라와 도시를 선택해 그곳의 프로그램을 찾습니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><h3>프로그램 상세</h3><p>일정, 지원 마감, 참가비, 마지막 확인일과 학교 공식 페이지 링크를 한 화면에 모았습니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.01"/></svg><h3>모르면 '미확인'</h3><p>학교가 아직 정하지 않았거나 확인되지 않은 값은 짐작하지 않고 '미확인'으로 표시합니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg><h3>저장</h3><p>관심 있는 프로그램을 저장해 모아 봅니다. Google 로그인을 켜면 계정에도 남길 수 있습니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1.5"/><rect x="14" y="4" width="7" height="16" rx="1.5"/></svg><h3>비교</h3><p>프로그램 2~3개의 일정, 비용, 지원 조건을 표 하나에 나란히 놓고 비교합니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5"/></svg><h3>주변 도시 여행 추천</h3><p>프로그램 전후로 들르기 좋은 주변 도시의 이동 정보와 추천 이유를 함께 보여 줍니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3>마감 임박 순</h3><p>지원 마감이 가까운 순서로 정렬하고, 이미 지난 마감은 따로 표시합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="cs-faq">
+  <div class="wrap">
+    <div class="sh rv"><h2>CampusScanner 질문</h2><p>여기 없는 내용은 <a href="#contact">메일로 물어봐 주세요</a></p></div>
+    <div class="faq rv">
+      <details>
+        <summary>어떤 프로그램을 다루나요?</summary>
+        <div class="ans">해외 대학이 방학 동안 여는 여름·겨울 학교 같은 단기 프로그램입니다. 기간은 주로 1~6주입니다. 유럽에서 시작해 아시아와 미주 프로그램까지 넓혀 검수하고 있습니다.</div>
+      </details>
+      <details>
+        <summary>화면의 정보가 학교 페이지와 다르면 어떻게 하나요?</summary>
+        <div class="ans">학교가 일정이나 비용을 바꾸면 화면이 늦게 바뀔 수 있습니다. 상세 화면의 <b>마지막 확인일</b>을 보고, 지원하기 전에는 학교 공식 페이지를 꼭 확인해 주세요. 틀린 정보를 <a href="#contact">알려 주시면</a> 확인해서 고칩니다.</div>
+      </details>
+      <details>
+        <summary>지원도 CampusScanner에서 하나요?</summary>
+        <div class="ans">아니요. 지원은 학교 공식 페이지에서 직접 합니다. CampusScanner는 상세 화면에서 학교 공식 페이지로 바로 연결해 드립니다.</div>
+      </details>
+    </div>
+    <div class="pagenav">
+      <a href="#/about"><small>MEVI 소개</small><b>← 우리 이야기</b></a>
+      <a class="next" href="#/swapstay"><small>다른 서비스</small><b>SwapStay →</b></a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ======================= SwapStay ======================= -->
+<div class="view" data-view="swapstay" id="swapstay" hidden>
+
+<section class="gs" aria-labelledby="gsSS">
+  <span class="gs-bg" style="--img:var(--ph-hero-ss)" aria-hidden="true"></span>
+  <div class="gs-in">
+    <nav class="gs-nav" aria-label="서비스 선택">
+      <a href="#/campusscanner"><span class="appico ico-cs" aria-hidden="true"></span><span>CampusScanner</span></a>
+      <a href="#/swapstay" aria-current="page"><span class="appico ico-ss" aria-hidden="true"></span><span>SwapStay</span></a>
+    </nav>
+    <div class="gs-visual">
+      <div class="dev-phone"><img src="/assets/img/scr-ss-explore.webp" alt="SwapStay 데모의 둘러보기 화면. 지역, 가는 날, 돌아오는 날, 인원을 선택하는 칸과 예시 집 카드가 있습니다." width="600" height="1298" decoding="async"></div>
+    </div>
+    <div class="gs-info">
+      <h1 id="gsSS">SwapStay<small>국내 집 교환</small></h1>
+      <p class="gs-meta"><span>웹 서비스</span><span>소개·데모 공개</span></p>
+      <p class="gs-desc">서로의 집을 바꿔 머무는 국내 집 교환 서비스입니다. 두 회원이 같은 기간에 서로의 집에서 지내고, 회원끼리는 돈이 오가지 않습니다.</p>
+      <ul class="gs-checks"><li>동시 맞교환</li><li>회원끼리 돈 없음</li><li>본인확인</li></ul>
+      <p class="gs-dl"><span class="k">서비스료</span><b>교환 1건, 회원마다 50,000원</b></p>
+      <div class="gs-btns">
+        <a href="https://swapstay.pages.dev/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>데모 열기<span class="sr"> (새 창)</span></a>
+        <a href="#ss-rules"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg>규칙 보기</a>
+      </div>
+      <p class="gs-ver">2026.10.12 개발 시작 · 2026.10.19 소개·데모 공개 · Next.js · Supabase · 포트원 · <a href="#ss-how">교환 순서</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ss-rules">
+  <div class="wrap">
+    <div class="sh rv"><h2>믿고 바꿀 수 있게 정한 규칙</h2><p>화면과 데이터베이스가 함께 지키는 SwapStay의 규칙입니다</p></div>
+    <div class="shots n3">
+      <ul data-stagger>
+        <li class="rv"><img src="/assets/img/scr-ss-home.webp" alt="SwapStay 소개 화면. '서로 집을 바꿔 지내요'라는 문장과 데모 둘러보기 버튼이 있습니다." width="600" height="1298" loading="lazy" decoding="async"><span>소개</span></li>
+        <li class="rv"><img src="/assets/img/scr-ss-explore.webp" alt="둘러보기 화면. 날짜와 인원을 선택하고 예시 집을 봅니다." width="600" height="1298" loading="lazy" decoding="async"><span>둘러보기(데모)</span></li>
+        <li class="rv"><img src="/assets/img/scr-ss-help.webp" alt="도움말 화면. 가입부터 교환까지 여섯 단계가 번호와 함께 적혀 있습니다." width="600" height="1298" loading="lazy" decoding="async"><span>도움말</span></li>
+      </ul>
+    </div>
+    <div class="story-gap"></div>
+    <div class="feats" data-stagger>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h14l-3-3M20 16H6l3 3"/></svg><h3>같은 기간에 맞교환</h3><p>두 회원이 같은 기간에 서로의 집을 씁니다. 한쪽만 머무는 이용은 없고, 한 번에 2~60박입니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.7 5.7l12.6 12.6"/></svg><h3>회원끼리 돈 없음</h3><p>숙박료, 보증금, 청소비를 주고받지 않습니다. 서비스료는 교환마다 회원당 50,000원 정액입니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg><h3>실제로 사는 집 1채</h3><p>본인이 실제로 사는 집만 등록합니다. 세입자는 집주인의 서면 동의, 공동주택은 관리규약 확인이 필요합니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><h3>한 해 90박까지</h3><p>회원과 주소를 기준으로 한 해에 내줄 수 있는 밤을 셉니다. 탈퇴했다 다시 가입해도 이어서 셉니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><h3>주소는 확정된 상대에게만</h3><p>확정되고 24시간이 지나거나 시작일 0시가 되면 보이고, 교환이 끝나는 날까지만 보입니다.</p></div>
+      <div class="feat rv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/></svg><h3>본인확인</h3><p>만 19세 이상, 한 사람 한 계정입니다. 이름과 생년월일은 저장하지 않습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="ss-how">
+  <div class="wrap">
+    <div class="sh rv"><h2>교환은 이렇게 진행됩니다</h2><p>SwapStay 도움말에 있는 순서 그대로입니다</p></div>
+    <ol class="isteps" role="list" data-stagger>
+      <li class="rv">가입하고 <b>본인확인</b>을 합니다. 만 19세 이상만 이용할 수 있습니다.</li>
+      <li class="rv"><b>내 집을 등록</b>합니다. 비워 둘 수 있는 기간과 가고 싶은 곳(5곳까지)을 적습니다.</li>
+      <li class="rv">둘러보기에서 같은 기간에 바꿀 집을 찾아 <b>교환을 제안</b>합니다. 받은 제안은 시작일 2일 전까지 답합니다.</li>
+      <li class="rv">제안이 수락되면 두 회원이 48시간 안에 각자 <b>서비스료 50,000원</b>을 냅니다. 둘 다 내면 교환이 확정됩니다.</li>
+      <li class="rv">확정되고 24시간이 지나거나 시작일 0시가 되면 상대 집의 <b>정확한 주소</b>가 보입니다.</li>
+      <li class="rv">같은 기간에 <b>서로의 집에서 지냅니다</b>. 우리가 상대 집에 머무는 동안 상대는 우리 집에 머뭅니다.</li>
+    </ol>
+    <p class="inote rv">주소가 공개되기 전에는 누가 취소하든 두 회원 모두 서비스료를 <b>전액 돌려받습니다</b>.</p>
+    <div class="dlrow rv">
+      <a class="btn btn-primary" href="https://swapstay.pages.dev/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/></svg>데모 열기<span class="sr"> (새 창)</span></a>
+      <a class="btn btn-ghost" href="https://swapstay.pages.dev/help/" target="_blank" rel="noopener">도움말 전체 보기<svg class="ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v6H4V5h6"/></svg><span class="sr"> (새 창)</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ss-faq">
+  <div class="wrap">
+    <div class="sh rv"><h2>SwapStay 질문</h2><p>여기 없는 내용은 <a href="#contact">메일로 물어봐 주세요</a></p></div>
+    <div class="faq rv">
+      <details>
+        <summary>지금 가입할 수 있나요?</summary>
+        <div class="ans">아직은 아닙니다. 지금은 소개 페이지와 데모만 열려 있습니다. 데모는 브라우저 안에서만 돌아가고, 실제 가입과 결제는 꺼져 있습니다.</div>
+      </details>
+      <details>
+        <summary>서비스료는 언제, 어떻게 내나요?</summary>
+        <div class="ans">교환 제안이 수락되면 48시간 안에(늦어도 시작일 전까지) 두 회원이 각자 <b>50,000원</b>을 카드로 냅니다. 머무는 날수, 집 크기, 지역과 상관없이 같습니다.</div>
+      </details>
+      <details>
+        <summary>취소하면 돌려받을 수 있나요?</summary>
+        <div class="ans">확정 전이나 주소가 공개되기 전에는 누가 취소하든 두 회원 모두 전액 돌려받습니다. 주소가 공개된 뒤의 기준은 <a href="https://swapstay.pages.dev/help/" target="_blank" rel="noopener">SwapStay 도움말<span class="sr"> (새 창)</span></a>에 있습니다.</div>
+      </details>
+    </div>
+    <div class="pagenav">
+      <a href="#/campusscanner"><small>다른 서비스</small><b>← CampusScanner</b></a>
+      <a class="next" href="#/tech"><small>기술</small><b>만드는 과정 보기 →</b></a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ======================= 기술 ======================= -->
+<div class="view" data-view="tech" id="tech" hidden>
+
+<header class="pgband">
+  <span class="pgbg" style="--img:var(--ph-band-tech)" aria-hidden="true"></span>
+  <div>
+    <p class="pgk">기술</p>
+    <h1>공식 출처에서 화면까지</h1>
+    <p class="pgsub">CampusScanner의 프로그램 정보는 네 단계를 거쳐 화면에 오릅니다. 단계마다 근거와 기록을 남깁니다.</p>
+  </div>
+  <span class="pgline" aria-hidden="true"></span>
+</header>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sh rv"><h2>만드는 과정</h2><p>모으는 사람과 확인하는 사람을 나누고, 공개된 것만 보여 줍니다</p></div>
+    <div class="steps" data-stagger>
+      <div class="step rv">
+        <div class="k">01</div>
+        <div class="fig fig-doc" data-ui aria-hidden="true"><span class="bar"><i></i>학교 공식 페이지</span><span class="ln w8"></span><span class="ln w5"></span><span class="hl">Programme dates: 4 – 29 January 2027</span><span class="ln w7"></span><span class="ln w5"></span></div>
+        <h3>공식 페이지 찾기</h3>
+        <p>대학과 프로그램의 공식 페이지와 PDF만 근거로 삼습니다. 모음 사이트와 블로그는 후보를 찾을 때 사람이 참고만 합니다.</p>
+      </div>
+      <div class="step rv">
+        <div class="k">02</div>
+        <div class="fig fig-tab" data-ui aria-hidden="true"><table><tr><th>일정</th><td>2027.01.04 ~ 01.29</td></tr><tr><th>참가비</th><td>CA$1,925.00</td></tr><tr><th>지원 마감</th><td class="unk">미확인</td></tr></table><span class="cap"><em>근거</em>값마다 근거 문장 · 출처 · 확인일</span></div>
+        <h3>근거와 함께 뽑기</h3>
+        <p>수집 파이프라인이 원문을 그대로 보관하고, 일정·비용·마감을 근거 문장, 출처 주소, 확인일과 함께 뽑습니다.</p>
+      </div>
+      <div class="step rv">
+        <div class="k">03</div>
+        <div class="fig fig-two" data-ui aria-hidden="true"><span class="p"><b>모음</b>모은 사람</span><span class="arr"></span><span class="p ok"><b>검수</b>다른 사람</span><span class="cap">같은 사람이면 저장되지 않습니다</span></div>
+        <h3>다른 사람이 검수</h3>
+        <p>모은 사람과 검수한 사람이 같으면 데이터베이스가 저장을 거부합니다. 확정되지 않은 값은 비워 둡니다.</p>
+      </div>
+      <div class="step rv">
+        <div class="k">04</div>
+        <div class="fig fig-flow" data-ui aria-hidden="true"><span>초안</span><i></i><span>검수</span><i></i><span class="on">공개</span><span class="cap">화면에는 공개된 것만 보입니다</span></div>
+        <h3>공개된 것만 보이기</h3>
+        <p>상태는 초안, 검수, 공개 순서로만 바뀌고, 공개 화면은 공개 상태의 정보만 읽을 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="stack">
+  <div class="wrap">
+    <div class="sh rv"><h2>기술 구성</h2><p>두 서비스가 같은 원칙 위에서 서로 다른 문제를 풉니다</p></div>
+    <div class="bento" data-stagger>
+      <article class="tile rv"><ul class="chips" aria-label="쓰는 기술"><li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>Tailwind CSS 4</li></ul><h3>웹 화면</h3><p>두 서비스 모두 Next.js로 만듭니다. SwapStay는 정적 파일로 내보내 Cloudflare Pages에 올립니다.</p><p class="who">CampusScanner · SwapStay</p></article>
+      <article class="tile rv"><ul class="chips" aria-label="쓰는 기술"><li>Supabase</li><li>PostgreSQL</li><li>RLS</li><li>DB 함수</li></ul><h3>데이터와 권한</h3><p>화면은 공개 키만 씁니다. 공개된 데이터만 읽히도록 행 단위 권한을 걸고, SwapStay는 DB 함수로만 읽고 씁니다.</p><p class="who">CampusScanner · SwapStay</p></article>
+      <article class="tile rv"><ul class="chips" aria-label="쓰는 기술"><li>Python 3.12</li><li>uv</li><li>Ruff</li><li>mypy</li><li>pytest</li></ul><h3>수집 파이프라인</h3><p>공식 페이지를 예의 있게 받아 원문을 보관하고, 근거를 검증한 뒤 검수 문서와 초안 묶음을 만듭니다.</p><p class="who">CampusScanner</p></article>
+      <article class="tile rv"><ul class="chips" aria-label="쓰는 기술"><li>포트원 V2</li><li>NHN Cloud Email</li><li>pg_cron</li><li>Deno</li></ul><h3>결제·알림·예약 작업</h3><p>결제와 본인확인, 환불, 알림 메일, 결제 기한 정리 같은 예약 작업을 맡습니다.</p><p class="who">SwapStay</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="principles">
+  <div class="wrap">
+    <div class="sh rv"><h2>설계 원칙</h2><p>사람의 결정에 쓰이는 정보라 더 조심합니다</p></div>
+    <div class="facts" data-stagger>
+      <div class="fact rv"><div class="fk">판단할 수 있게</div><h3>모르는 값은 모른다고 보여 줍니다</h3><p>지원 마감, 비용, 주소 공개 시점처럼 결정에 쓰이는 정보는 근거와 함께 보여 주고, 확인되지 않은 값은 짐작해 채우지 않습니다.</p></div>
+      <div class="fact rv"><div class="fk">규칙은 한 곳에서</div><h3>최종 판단은 데이터베이스가 합니다</h3><p>화면은 같은 규칙으로 미리 알려 주기만 합니다. 그래서 화면과 서버의 규칙이 어긋나지 않습니다.</p></div>
+      <div class="fact rv"><div class="fk">꼭 필요한 정보만</div><h3>받는 정보를 줄입니다</h3><p>SwapStay는 본인확인 때 이름과 생년월일을 저장하지 않고, 휴대폰 번호는 암호화해 따로 보관합니다. 실제 회원 정보는 정한 사람만 다룹니다.</p></div>
+      <div class="fact rv"><div class="fk">누구나 쓸 수 있게</div><h3>키보드로도, 휴대폰으로도</h3><p>키보드만으로 쓸 수 있게 초점 표시와 '본문으로 건너뛰기'를 두고, 한국어 문장은 어절 단위로 줄을 바꿉니다.</p></div>
+    </div>
+    <div class="pagenav">
+      <a href="#/swapstay"><small>서비스</small><b>← SwapStay</b></a>
+      <a class="next" href="#/proof"><small>검증</small><b>어떻게 확인하는지 보기 →</b></a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ======================= 검증 ======================= -->
+<div class="view" data-view="proof" id="proof" hidden>
+
+<header class="pgband">
+  <span class="pgbg" style="--img:var(--ph-band-proof)" aria-hidden="true"></span>
+  <div>
+    <p class="pgk">검증</p>
+    <h1>근거를 남기고,<br>다시 확인합니다</h1>
+    <p class="pgsub">보여 주는 정보와 지키는 규칙마다 확인할 방법을 함께 만듭니다.</p>
+    <ul class="pgnums">
+      <li><b><span class="cnt" data-to="113">113</span>개</b><span>시험 파일</span></li>
+      <li><b><span class="cnt" data-to="17">17</span>개</b><span>실제 데이터 E2E</span></li>
+      <li><b><span class="cnt" data-to="17">17</span>개</b><span>규칙별 시험 파일</span></li>
+    </ul>
+  </div>
+  <span class="pgline" aria-hidden="true"></span>
+</header>
+
+<section class="sec" id="data-review">
+  <div class="wrap">
+    <div class="sh rv"><h2>데이터 검수</h2><p>CampusScanner에서는 모은 사람과 확인한 사람이 다릅니다</p></div>
+    <div class="proofgrid">
+      <div class="phases rv">
+        <div class="phase"><div class="k">출처</div><div><h3>공식 페이지와 PDF만</h3><p>대학·프로그램의 공식 페이지와 PDF만 최종 근거로 삼습니다. 모음 사이트와 블로그는 후보를 찾을 때 사람이 참고만 하고, 스크립트로 긁어 오지 않습니다.</p></div></div>
+        <div class="phase"><div class="k">근거</div><div><h3>값마다 근거 문장과 확인일</h3><p>일정, 비용, 마감마다 <b>출처 주소, 근거 문장, 확인일</b>을 남깁니다.</p></div></div>
+        <div class="phase"><div class="k">두 사람</div><div><h3>모은 사람과 확인한 사람을 나눕니다</h3><p>수집한 사람과 검수한 사람이 같으면 데이터베이스 제약이 저장을 거부합니다.</p></div></div>
+        <div class="phase"><div class="k">추정 금지</div><div><h3>모르면 비워 둡니다</h3><p>마감 연도가 없거나, 권장 기한이거나, 금액이 확정 전이면 값을 비워 두고 화면에 <b>미확인</b>으로 보여 줍니다.</p></div></div>
+      </div>
+      <figure class="card rv">
+        <figcaption>프로그램 정보의 상태</figcaption>
+        <ol class="states">
+          <li><b>초안</b><span>모은 사람이 근거와 함께 올린 상태입니다. 화면에는 보이지 않습니다.</span></li>
+          <li><b>검수</b><span>다른 사람이 근거를 하나하나 확인한 상태입니다.</span></li>
+          <li class="on"><b>공개</b><span>공개 화면에 보이는 상태입니다. 공개 화면은 이 상태의 정보만 읽을 수 있습니다.</span></li>
+        </ol>
+        <p class="cnote">상태는 이 순서로만 바뀝니다. CampusScanner 데이터베이스의 규칙 그대로입니다.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="rule-tests">
+  <div class="wrap">
+    <div class="sh rv"><h2>규칙 시험</h2><p>SwapStay에서는 규칙마다 시험이 있습니다</p></div>
+    <div class="proofgrid">
+      <div class="phases rv">
+        <div class="phase"><div class="k">DB 함수</div><div><h3>규칙의 최종 판단은 데이터베이스가</h3><p>화면은 표를 직접 읽거나 쓰지 못하고 DB 함수로만 다룹니다. 화면에서 미리 검사하는 규칙도 서버와 같은 규칙입니다.</p></div></div>
+        <div class="phase"><div class="k">실제 SQL</div><div><h3>진짜 Postgres 위에서 시험</h3><p>WebAssembly로 돌리는 실제 Postgres(PGlite) 위에서 표와 DB 함수를 그대로 시험합니다.</p></div></div>
+        <div class="phase"><div class="k">결정마다</div><div><h3>규칙을 정하면 시험도 함께</h3><p>서비스 규칙을 정할 때마다 결정 문서에 적고, 그 결정을 지키는지 확인하는 시험을 따로 둡니다.</p></div></div>
+        <div class="phase"><div class="k">리허설</div><div><h3>시험용 서버에서 끝까지</h3><p>가입과 본인확인, 결제, 환불까지 실제 서비스와 같은 흐름을 시험용 서버에서 다시 확인했습니다.</p></div></div>
+      </div>
+      <figure class="card rv">
+        <figcaption>시험 파일 수</figcaption>
+        <div class="brow"><div class="bl">SwapStay 전체 시험<em>43개</em></div><span class="track"><span class="bfill" style="--v:100%"></span></span></div>
+        <div class="brow"><div class="bl">그 가운데 규칙(결정)별 시험<em>17개</em></div><span class="track"><span class="bfill" style="--v:39.5%"></span></span></div>
+        <div class="brow"><div class="bl">CampusScanner 화면 시험<em>32개</em></div><span class="track"><span class="bfill c2" style="--v:74.4%"></span></span></div>
+        <div class="brow"><div class="bl">CampusScanner 수집 파이프라인 시험<em>21개</em></div><span class="track"><span class="bfill c2" style="--v:48.8%"></span></span></div>
+        <div class="brow"><div class="bl">CampusScanner 실제 데이터 E2E<em>17개</em></div><span class="track"><span class="bfill c2" style="--v:39.5%"></span></span></div>
+        <p class="cnote">2026년 11월 19일, 두 저장소의 main 기준입니다.</p>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="screen-checks">
+  <div class="wrap">
+    <div class="sh rv"><h2>화면 점검</h2><p>넓은 화면과 휴대폰에서, 키보드로도 확인합니다</p></div>
+    <div class="pair" data-stagger>
+      <figure class="rv"><img src="/assets/img/scr-cs-desk.webp" alt="넓은 화면(1280)에서 본 CampusScanner 홈" width="1280" height="720" loading="lazy" decoding="async"><figcaption>넓은 화면 1280</figcaption></figure>
+      <figure class="rv"><img src="/assets/img/scr-cs-home.webp" alt="휴대폰(390)에서 본 CampusScanner 홈" width="600" height="1298" loading="lazy" decoding="async"><figcaption>휴대폰 390</figcaption></figure>
+    </div>
+    <div class="facts" data-stagger>
+      <div class="fact rv"><div class="fk">실제 데이터 E2E</div><h3>핵심 흐름을 끝까지 눌러 봅니다</h3><p>홈에서 목록, 상세, 비교, 저장까지 개발 데이터베이스의 실제 데이터로 확인합니다. 학교 공식 페이지 링크가 새 탭으로 열리는지도 봅니다.</p></div>
+      <div class="fact rv"><div class="fk">1280과 390</div><h3>넓은 화면과 휴대폰을 나란히</h3><p>화면을 바꿀 때마다 넓은 화면(1280)과 휴대폰(390) 폭에서 캡처해 나란히 비교합니다.</p></div>
+      <div class="fact rv"><div class="fk">접근성</div><h3>검사 도구와 키보드로</h3><p>axe-core로 접근성 규칙을 검사하고, 키보드로 옮겨 다닐 때 초점 표시가 잘리지 않는지 따로 시험합니다.</p></div>
+      <div class="fact rv"><div class="fk">장애 대응</div><h3>데이터를 못 불러올 때</h3><p>데이터베이스에 닿지 못하면 빈 화면 대신 오류 화면을 보여 주고 5xx로 답하는지 점검 스크립트로 확인합니다.</p></div>
+    </div>
+    <div class="pagenav">
+      <a href="#/tech"><small>기술</small><b>← 만드는 과정</b></a>
+      <a class="next" href="#/news"><small>소식</small><b>새 소식 보기 →</b></a>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ======================= 소식 ======================= -->
+<div class="view" data-view="news" id="news" hidden>
+<section class="sec">
+  <div class="wrap">
+    <div class="newshead"><h1>소식</h1><p>MEVI의 공개, 개발, 팀 소식을 모았습니다</p></div>
+    <div class="nfilter" role="group" aria-label="소식 분류">
+      <button type="button" data-f="all" aria-pressed="true">전체</button>
+      <button type="button" data-f="release" aria-pressed="false">공개</button>
+      <button type="button" data-f="dev" aria-pressed="false">개발</button>
+      <button type="button" data-f="team" aria-pressed="false">팀</button>
+    </div>
+    <ul class="nlist">
+      <li data-cat="dev"><a class="ni" href="#/campusscanner"><time datetime="2026-11-19">2026.11.19</time><span class="tag">개발</span><span><b>CampusScanner, Google 로그인과 계정별 저장 준비</b><span class="d">Google 계정으로 로그인하면 관심 조건과 저장한 프로그램을 계정에 남길 수 있게 준비했습니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="dev"><a class="ni" href="#data-review"><time datetime="2026-11-19">2026.11.19</time><span class="tag">개발</span><span><b>CampusScanner, 아시아·미주 프로그램까지 넓혀 검수 중</b><span class="d">독일·스페인, 아시아, 미주·뉴질랜드·체코의 2027년 과정을 학교 공식 근거와 함께 모으고, 검수를 거쳐 하나씩 더하고 있습니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="dev"><a class="ni" href="#/campusscanner"><time datetime="2026-11-18">2026.11.18</time><span class="tag">개발</span><span><b>CampusScanner 홈과 지역 탐색을 새로 만들었습니다</b><span class="d">사진으로 넘겨 보는 첫 화면에서 나라·시즌·분야로 바로 찾고, 지도에서 나라와 도시를 선택해 그곳의 프로그램을 봅니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="dev"><a class="ni" href="#rule-tests"><time datetime="2026-11-17">2026.11.17</time><span class="tag">개발</span><span><b>SwapStay, 시험용 서버에서 가입부터 환불까지 다시 확인</b><span class="d">본인확인, 결제, 환불까지 실제 서비스와 같은 흐름을 시험용 서버에서 다시 확인했습니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="team"><a class="ni" href="#/campusscanner"><time datetime="2026-10-29">2026.10.29</time><span class="tag">팀</span><span><b>서비스 이름을 CampusScanner로 바꿨습니다</b><span class="d">작업 이름 Campass를 CampusScanner로 바꾸고, 한글 표기는 캠퍼스스캐너로 정했습니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="dev"><a class="ni" href="#how"><time datetime="2026-10-26">2026.10.26</time><span class="tag">개발</span><span><b>CampusScanner 수집 파이프라인을 시작했습니다</b><span class="d">학교 공식 페이지와 PDF를 원문 그대로 보관하고, 일정·비용·마감을 근거 문장과 함께 뽑는 Python 파이프라인입니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="dev"><a class="ni" href="#cs-features"><time datetime="2026-10-20">2026.10.20</time><span class="tag">개발</span><span><b>CampusScanner에 저장과 비교를 더했습니다</b><span class="d">관심 있는 프로그램을 저장하고, 2~3개를 골라 일정·비용·지원 조건을 나란히 비교합니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="release"><a class="ni" href="https://swapstay.pages.dev/" target="_blank" rel="noopener"><time datetime="2026-10-19">2026.10.19</time><span class="tag">공개</span><span><b>SwapStay 소개 페이지와 데모를 열었습니다</b><span class="d">swapstay.pages.dev에서 서비스 소개와 브라우저 안에서만 도는 데모를 볼 수 있습니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v6H4V5h6"/></svg><span class="sr"> (새 창)</span></span></a></li>
+      <li data-cat="dev"><a class="ni" href="#cs-features"><time datetime="2026-10-19">2026.10.19</time><span class="tag">개발</span><span><b>CampusScanner 목록·필터·상세 화면</b><span class="d">국가·시즌·연도로 거르는 목록과, 일정·지원 마감·참가비를 학교 공식 페이지 링크와 함께 보여 주는 상세 화면을 만들었습니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="team"><a class="ni" href="https://github.com/MEVI-TEAM" target="_blank" rel="noopener"><time datetime="2026-10-15">2026.10.15</time><span class="tag">팀</span><span><b>GitHub 조직 MEVI-TEAM을 열었습니다</b><span class="d">CampusScanner(당시 이름 Campass) 개발을 시작하고, SwapStay 저장소도 이곳으로 옮겼습니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v6H4V5h6"/></svg><span class="sr"> (새 창)</span></span></a></li>
+      <li data-cat="team"><a class="ni" href="#/about"><time datetime="2026-10-14">2026.10.14</time><span class="tag">팀</span><span><b>팀 이름을 MEVI로 정했습니다</b><span class="d">More Evolution, Valuable Innovation. 계속 나아지면서 쓸모 있는 것을 만들자는 뜻입니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+      <li data-cat="dev"><a class="ni" href="#/swapstay"><time datetime="2026-10-12">2026.10.12</time><span class="tag">개발</span><span><b>SwapStay 개발을 시작했습니다</b><span class="d">사전 신청 페이지와 서비스 앱 데모 화면부터 만들었습니다.</span></span><span class="arr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+</div>
+
+</main>
+
+<footer class="ft">
+  <nav class="ft-map" aria-label="사이트 지도">
+    <div><h3>소개</h3><ul><li><a href="#intro">MEVI 소개</a></li><li><a href="#values">우리의 가치</a></li><li><a href="#history">걸어온 길</a></li><li><a href="#team">팀</a></li><li><a href="#contact">문의</a></li></ul></div>
+    <div><h3>서비스</h3><ul><li><a href="#/campusscanner">CampusScanner</a></li><li><a href="#/swapstay">SwapStay</a></li><li><a href="#ss-how">교환 순서</a></li></ul></div>
+    <div><h3>기술</h3><ul><li><a href="#how">만드는 과정</a></li><li><a href="#stack">기술 구성</a></li><li><a href="#principles">설계 원칙</a></li></ul></div>
+    <div><h3>검증</h3><ul><li><a href="#data-review">데이터 검수</a></li><li><a href="#rule-tests">규칙 시험</a></li><li><a href="#screen-checks">화면 점검</a></li></ul></div>
+    <div><h3>소식</h3><ul><li><a href="#/news">전체 소식</a></li><li><a href="#/news/release">공개</a></li><li><a href="#/news/dev">개발</a></li><li><a href="#/news/team">팀</a></li></ul></div>
+  </nav>
+  <div class="ft-util">
+    <a class="hot" href="mailto:mevi.support@gmail.com?subject=%5BMEVI%5D%20%ED%98%91%EB%A0%A5%20%EB%AC%B8%EC%9D%98">협력 문의</a>
+    <a href="https://swapstay.pages.dev/" target="_blank" rel="noopener">SwapStay 데모<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v6H4V5h6"/></svg><span class="sr"> (새 창)</span></a>
+    <a href="https://github.com/MEVI-TEAM" target="_blank" rel="noopener">MEVI GitHub<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v6H4V5h6"/></svg><span class="sr"> (새 창)</span></a>
+  </div>
+  <div class="ft-bar">
+    <div class="ft-bar-in">
+      <a class="logo" href="#/" aria-label="MEVI 홈"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M7 38V22a8.5 8.5 0 0 1 17 0M24 38V18a8.5 8.5 0 0 1 17 0v20"/></svg><b>MEVI</b></a>
+      <p class="ft-copy">© 2026 MEVI. 동국대학교 학생 팀</p>
+      <div class="ft-sns">
+        <a href="https://github.com/MEVI-TEAM" target="_blank" rel="noopener" aria-label="MEVI GitHub (새 창)"><svg class="fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a href="mailto:mevi.support@gmail.com" aria-label="메일 보내기"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg></a>
+      </div>
+    </div>
+    <p class="ft-credit">사진: Unsplash의 Arnold Francisca, Damian Kravchuk, Danilo Rios, Filip Szalbot, Huy Nguyen, Jakub Żerdzicki, Johnny Briggs, Julien Riedel, Luca Bravo, Mr Cup / Fabien Barral, Nazrin Babashova, Priscilla Du Preez, Sasun Bughdaryan, Shai Pal, Steven Wong, Yohan Cho, @felirbe 작가. 서비스 화면은 CampusScanner 개발 화면과 SwapStay 공개 데모입니다.</p>
+  </div>
+</footer>
+
+<div class="toaster" id="toaster" aria-live="polite"></div>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

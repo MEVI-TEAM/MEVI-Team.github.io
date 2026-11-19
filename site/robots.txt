@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mevi-team.github.io/sitemap.xml
