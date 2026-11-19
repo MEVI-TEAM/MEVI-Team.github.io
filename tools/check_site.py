@@ -106,10 +106,35 @@ def check_files_and_anchors():
     print(f'  파일 {len(refs)}개, 페이지 안 링크 확인')
 
 
+# 로고와 아이콘은 먹색과 흰색만 씁니다(2026-11-19: 주황 바탕의 흰 m이 패스트푸드 로고처럼 보였습니다).
+# 아이콘 주소에는 ?v= 판 번호를 붙여, 바꿨을 때 브라우저가 예전 아이콘을 캐시에서 계속 쓰지 않게 합니다.
+LOGO_COLORS = {'#14171F', '#FFFFFF'}
+
+
+def check_logo():
+    files = [os.path.join(SITE, 'favicon.svg')]
+    brand = os.path.join(SITE, 'assets', 'brand')
+    if os.path.isdir(brand):
+        files += [os.path.join(brand, f) for f in os.listdir(brand) if f.endswith('.svg')]
+    for f in files:
+        svg = open(f, encoding='utf-8').read()
+        for c in set(re.findall(r'#[0-9A-Fa-f]{6}\b', svg)):
+            if c.upper() not in LOGO_COLORS:
+                fail(f'{os.path.relpath(f, SITE)} 에 먹색·흰색이 아닌 색 {c} 이 있습니다')
+    for page in ('index.html', '404.html'):
+        html = open(os.path.join(SITE, page), encoding='utf-8').read()
+        for href in re.findall(r'<link rel="(?:icon|apple-touch-icon)"[^>]*href="([^"]+)"', html):
+            if '?v=' not in href:
+                fail(f'{page}: 아이콘 주소 {href} 에 ?v= 판 번호가 없습니다')
+    print(f'  로고·아이콘 파일 {len(files)}개 확인')
+
+
 def main():
     print('사이트 폴더:', SITE)
     print('1. 파일과 링크')
     check_files_and_anchors()
+    print('1-2. 로고 색과 아이콘 주소')
+    check_logo()
     browser = find_browser()
     print('2. 화면 전환')
     if not browser:
